@@ -23,9 +23,7 @@ const todoList = () => {
         return list
             .map(
                 (todos) =>
-                {
-                    console.log(todos.completed ? "[X] " + todos.title + " " + ((todos.dueDate == today) ? "" : todos.dueDate) : "[] " + todos.title + " " + ((todos.dueDate == today) ? "" : todos.dueDate));
-                }
+                    `${(todos.completed ? "[X] " + todos.title + " " + ((todos.dueDate == today) ? "" : todos.dueDate) : "[ ] " + todos.title + " " + ((todos.dueDate == today) ? "" : todos.dueDate))}`
             )
             .join("\n");
     };
